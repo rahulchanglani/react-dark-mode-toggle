@@ -5,8 +5,8 @@ import Toggler from './Toggler';
 
 const GlobalStyles = createGlobalStyle`
   body {
-    background-color: ${props => props.darkMode ? '#334' : '#eef'};
-    color: ${props => props.darkMode ? '#eee' : '#222'};
+    background-color: ${props => props.darkMode ? '#334' : '#ccd'};
+    color: ${props => props.darkMode ? '#ccc' : '#222'};
   }
 `
 

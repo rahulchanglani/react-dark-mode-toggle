@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { MoonIcon } from '@heroicons/react/sloid';
+import { MoonIcon } from '@heroicons/react/24/solid';
 import { useContext } from 'react';
 import ThemeContext from './ThemeContext';
 
