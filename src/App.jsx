@@ -37,14 +37,16 @@ function App() {
         <h2> DARK MODE : </h2>
         <Toggler />
 
-        <button ref={btnRef} onClick={() => setIsOpen(prev => !prev)}>Options 🔽</button>
-        <div className={"dropdown " + (isOpen ? 'open' : 'closed')}>
-          <a href="#">Opt 1</a>
-          <a href="#">Opt 2</a>
-          <a href="#">Opt 3</a>
+        <div style={{ display: 'none', }}>
+          <button ref={btnRef} onClick={() => setIsOpen(prev => !prev)}>Options 🔽</button>
+          <div className={"dropdown " + (isOpen ? 'open' : 'closed')}>
+            <a href="#">Opt 1</a>
+            <a href="#">Opt 2</a>
+            <a href="#">Opt 3</a>
+          </div>
         </div>
-      </ThemeContext.Provider>
-    </div>
+      </ThemeContext.Provider >
+    </div >
   )
 }
 
