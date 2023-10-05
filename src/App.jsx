@@ -10,6 +10,24 @@ const GlobalStyles = createGlobalStyle`
   }
 `
 
+const StarRating = ({ rating }) => {
+  const stars = [];
+
+  for (let i = 1; i <= 5; i++) {
+    if (i <= rating) {
+      stars.push(<i key={i}>❤️</i>); 
+    } else if (i === Math.ceil(rating) && !Number.isInteger(rating)) {
+      stars.push(<i key={i} className='half-star'>🤍</i>);
+    } 
+    // else {
+    //   stars.push(<i key={i}>❤️</i>);
+    // }
+  }
+
+  return <div className="star-rating">{stars}</div>;
+};
+
+
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
@@ -37,7 +55,8 @@ function App() {
         <h2> DARK MODE : </h2>
         <Toggler />
 
-        <div style={{ display: 'none', }}>
+        <StarRating rating={2.243} />
+        <div style={{ display: 'none' }}>
           <button ref={btnRef} onClick={() => setIsOpen(prev => !prev)}>Options 🔽</button>
           <div className={"dropdown " + (isOpen ? 'open' : 'closed')}>
             <a href="#">Opt 1</a>
